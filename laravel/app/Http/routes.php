@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+//Route::get('/', function () {
+//    return view('index');
+//});
+
+Route::get('/','IndexController@index');
 
 Route::get('/home', function () {
     return "wellcome to user center";
@@ -30,6 +32,15 @@ Route::get('auth/logout','Auth\AuthController@getLogout');
 
 Route::get('jie','ProController@jie');
 Route::post('jie','ProController@jiepost');
+
+Route::get('pro/{id}','ProController@pro');
+Route::post('pro/{id}','ProController@propost');
+
+
+Route::get('run','GrowController@run');
+Route::get('myzd','GrowController@myzd');
+Route::get('mytz','GrowController@mytz');
+Route::get('mysy','GrowController@mysy');
 
 Route::get('prolist','CheckController@proList');
 
