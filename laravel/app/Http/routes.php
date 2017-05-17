@@ -26,7 +26,11 @@ Route::get('auth/login','Auth\AuthController@getLogin');
 Route::post('auth/login','Auth\AuthController@postLogin');
 
 Route::get('auth/register','Auth\AuthController@getRegister');
-Route::post('auth/register','Auth\AuthController@postRegister');
+
+Route::post('auth/register',[
+    'middleware'=>'App\Http\Middleware\EmailMiddleware',
+    'uses'=>'Auth\AuthController@postRegister'
+]);
 
 Route::get('auth/logout','Auth\AuthController@getLogout');
 
@@ -46,3 +50,7 @@ Route::get('prolist','CheckController@proList');
 
 Route::get('check/{id}','CheckController@check');
 Route::post('check/{id}','CheckController@checkpost');
+
+Route::get('test',['middleware'=>'App\Http\Middleware\EmailMiddleware',function(){
+    echo  'hello i just an test.....<br />';
+}]);

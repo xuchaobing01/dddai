@@ -12,6 +12,7 @@ use App\Http\Controllers\Controller;
 
 class ProController extends Controller
 {
+    protected $middleware=['App\Http\Middleware\Authenticate'=>[]];
     public function jie()
     {
         return view('woyaojiekuan');

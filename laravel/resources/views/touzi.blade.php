@@ -36,70 +36,7 @@
 </head>
 
 <body style="display: block;">
-<!--header 1000-->
-<div class="niwdoawi_top">
-<div class="niwdoawi_top">
-	<div class="header w1000 clearfix">
-        <div class="fl tel">
-            <em class="fs_14 mr_5 tel_ico">客服热线</em><i class="aril">010-57155250</i>
-            <span class="iphone"><i></i><a href="#" target="_blank">手机客户端</a>
-            	<div class="webdown">
-                	
-                </div>
-            </span>
-            
-            <span class="hover_sina">
-            	<a href="#" target="_blank"></a>
-            </span>
-            <span class="fs_12 ml_10">市场有风险，投资需谨慎</span>
-        </div>
-        
-        <div class="fr login clearfix">
-            <input type="hidden" value="e492c9d9-6152-42f0-945e-f053611d12bf" id="stok">
-            <div class="login_bt"><a href="#" rel="nofollow" title="登录" class="fff">登录</a><a href="#" rel="nofollow" title="注册" class="fff">注册</a></div>
-            <dl>
-                <dt><a href="#" target="_blank" rel="nofollow" title="账户中心" class="txnone">账户中心</a></dt>
-                <dd><a href="#" target="_blank" rel="nofollow" title="充值">充值</a></dd>
-                <dd><a href="#" target="_blank" rel="nofollow" title="提现">提现</a></dd>
-                <dd><a href="#" target="_blank" rel="nofollow" title="我的投资">我的投资</a></dd>
-                <dd><a href="#" target="_blank" rel="nofollow" title="我的借款">我的借款</a></dd>
-                
-            </dl>
-            <div class="community"><a href="#" target="_blank" rel="nofollow" class="fc_white">关于我们</a></div>
-        </div>
-    </div>
-</div><!--登录-->
-<div class="niwdoawi_center">
-	<div class="w1000 logo clearfix">
-    	<a href="#" title="给梦想可能" class="fl pl_20 logo_a holiday_logo"><img height="52" src="/image/logo_all.png" alt="点点贷"></a>
-        <div class="fl logo_aft">
-        	<div class="pos_aft" id="headLogo">
-            			<a class="defaultlogo" href="#"><img src="/image/logo1200.png"></a>
-            </div>
-        </div>
-        <div class="fr righ">
-        	<ul class="nav clearfix">
-            	<li>
-      			 <a rel="nofollow" href="#" title="首页" class="one">首页</a>
-                </li>
-                <li class="one">
-                	<a href="#" title="我要投资" class="two">我要投资</a>
-                </li>
-                <li class="rela">
-                	<a href="#" title="我要借款" class="one">我要借款</a>
-                </li>
-                 <li class="rela">
-                 <a href="#" target="_blank" title="新手导航" class="one">新手导航</a>
- 
-                </li>
-                <li style="margin-right:0;">
-                	<a href="#" target="_blank" title="社区" class="one">社区 </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div><!--nav-->
-</div><!--nav-->
+@include('header')
  
   <!--红包抵扣金额-->
   <!--手续费-->
