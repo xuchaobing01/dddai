@@ -41,6 +41,14 @@ Route::get('pro/{id}','ProController@pro');
 Route::post('pro/{id}','ProController@propost');
 
 
+Route::post('sm','IndexController@sm');
+Route::post('checksm','IndexController@checksm');
+
+Route::get('captcha','IndexController@captcha');
+Route::post('checkcaptcha','IndexController@checkcaptcha');
+
+Route::get('test','IndexController@test');
+
 Route::get('run','GrowController@run');
 Route::get('myzd','GrowController@myzd');
 Route::get('mytz','GrowController@mytz');
@@ -51,6 +59,6 @@ Route::get('prolist','CheckController@proList');
 Route::get('check/{id}','CheckController@check');
 Route::post('check/{id}','CheckController@checkpost');
 
-Route::get('test',['middleware'=>'App\Http\Middleware\EmailMiddleware',function(){
-    echo  'hello i just an test.....<br />';
-}]);
+//Route::get('test',['middleware'=>'App\Http\Middleware\EmailMiddleware',function(){
+//    echo  'hello i just an test.....<br />';
+//}]);

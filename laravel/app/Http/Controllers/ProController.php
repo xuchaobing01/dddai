@@ -9,6 +9,7 @@ use App\Bid;
 use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Validator;
 
 class ProController extends Controller
 {
@@ -23,6 +24,45 @@ class ProController extends Controller
 
         if(!\Auth::check()){
             return redirect('auth/login');
+        }
+        /*
+        //自动验证
+        $this->validate($req,
+            [
+                'age'=>'required|in:15,40,80',
+                'money'=>'required|digits_between:2,7',
+                'mobile'=>'required|regex:/^1[34578]\d{9}$/'
+            ],
+            [
+                'age.required'=>'请选择年龄',
+                'age.in'=>'请选择年龄',
+                'money.required'=>'借款金额不能为空',
+                'money.digits_between'=>'借款金额只能是10~9999999',
+                'mobile.required'=>'手机号码不能为空',
+                'mobile.regex'=>'请输入正确的手机号码'
+            ]
+        );
+        */
+
+        //手动验证
+        $validate=Validator::make(
+            $req->all(),
+            [
+                'age'=>'required|in:15,40,80',
+                'money'=>'required|digits_between:2,7',
+                'mobile'=>'required|regex:/^1[34578]\d{9}$/'
+            ],
+            [
+                'age.required'=>'请选择年龄',
+                'age.in'=>'请选择年龄',
+                'money.required'=>'借款金额不能为空',
+                'money.digits_between'=>'借款金额只能是10~9999999',
+                'mobile.required'=>'手机号码不能为空',
+                'mobile.regex'=>'请输入正确的手机号码'
+            ]
+        );
+        if($validate->fails()){
+            return back()->withErrors($validate)->withInput();
         }
 
         DB::beginTransaction();
